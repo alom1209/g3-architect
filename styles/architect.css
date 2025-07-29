@@ -100,28 +100,6 @@ main > section{
 #fea{
     color: #FF900E;
 }
-/* responsive media query for banner section */
-/* for small devices */
-@media screen and (max-width: 576px) {
-    .nav-links,.navbar,.teams{
-        flex-direction: column;
-    }
-    .features{
-        margin-left: 20px;
-    }
-    .team-img-container{
-        grid-template-columns: repeat(1,1fr);
-    }
-}
-/* for medium size devices */
-@media screen and (min-width:576px) and (max-width:992px) {
-    .teams{
-        flex-direction: column;
-    }
-    .features{
-        margin: 50px auto;
-    }
-}
 /* facts designer */
 .descri{
     max-width: 540px;
@@ -149,4 +127,90 @@ main > section{
     font-size: 1.25rem;
     font-weight: 600;
     margin-top: 10px;
+}
+.sponsor{
+    max-width: 542px;
+    margin: 50px auto;
+    text-align: center;
+}
+.sponsor-companies{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.sponsor-companies img{
+    filter: grayscale(100%);
+}
+/* feature section */
+#feature-section-title{
+    border-left: 5px solid rgba(255, 144, 14, 1);
+    padding-left: 20px;
+}
+.feature-card{
+    padding: 20px;
+    box-shadow: 0 4px 30px 0px rgba(0, 0, 0, 0.06) ;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+.feature-card .feature-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.features-double{
+    gap: 146px;
+}
+#badge{
+    padding: 45px 42px ;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: -100px;
+    margin-left: -78px;
+}
+#experience-year{
+    font-size: 4rem;
+    font-weight: 700;
+}
+.features-double img{
+    width: 100%;
+}
+.footer{
+    text-align: center;
+    margin-top: 30px;
+    background-color:rgba(255, 244, 231, 1);
+    max-width: 1440px;
+    /* height: 100px; */
+    display: flex;
+    align-items: centers;
+    justify-content: center;
+}
+/* responsive media query for banner section */
+/* for small devices */
+@media screen and (max-width: 576px) {
+    .nav-links,.navbar,.teams,.features-double{
+        flex-direction: column;
+    }
+    .features{
+        margin-left: 20px;
+    }
+    .team-img-container,.facts-container, .sponsor-companies{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .facts-container,.sponsor-companies{
+        justify-items: center;
+        gap: 24px;
+    }
+    #badge{
+        margin-top: o px;
+        margin-left: 0px;
+    }
+}
+/* for medium size devices */
+@media screen and (min-width:576px) and (max-width:992px) {
+    .teams{
+        flex-direction: column;
+    }
+    .features{
+        margin: 50px auto;
+    }
 }
